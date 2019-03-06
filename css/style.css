@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Header */
+
+header {
+  position: relative;
+  height: 100vh;
+  background: url(../img/bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: left center;
+}
+
+.burger {
+  position: fixed;
+  top: 40px;
+  right: 20px;
+  font-size: 50px;
+  z-index: 3;
+  color: white;
+}
+
+i.off {
+  display: none;
+}
+
+.fa-angle-up {
+  color: white;
+}
+
+.menu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 40vh;
+  background-color: #000;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.container-items {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  flex-basis: 40%;
+  list-style: none;
+}
+
+.container-items li {
+  width: 100%;
+  text-align: center;
+}
+
+.container-items li a {
+  display: block;
+  padding: 20px 0;
+  text-decoration: none;
+  color: white;
+}
+
+.container-items li a:hover {
+  background-color: red;
+}
+
+.menu.off {
+  top: -40vh;
+}
+
+.photo {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.photo img {
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+  border-radius: 50%;
+  box-shadow: 2px 2px 4px 2px orange;
+}
+
+.about-me {
+  position: absolute;
+  width: 100%;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about-me h1 {
+  font-size: 28px;
+  text-align: center;
+  color: orange;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.about-me p {
+  padding: 20px 10px;
+  font-size: 20px;
+  text-align: center;
+  color: orange;
+}
