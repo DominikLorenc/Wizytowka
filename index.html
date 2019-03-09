@@ -1,58 +1,114 @@
 <!DOCTYPE html>
 <html lang="pl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Portfolio Dominik Lorenc</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-        crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
-
+  <body>
     <header>
+      <div class="burger">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-angle-up off"></i>
+      </div>
+      <nav class="menu off">
+        <ul class="container-items">
+          <li><a href="#">Przycisk 1</a></li>
+          <li><a href="#">Przycisk 1</a></li>
+          <li><a href="#">Przycisk 1</a></li>
+          <li><a href="#">Przycisk 1</a></li>
+        </ul>
+      </nav>
 
-        <div class="burger">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-angle-up off"></i>
-        </div>
-        <nav class="menu off">
-            <ul class="container-items">
-                <li><a href="#">Przycisk 1</a></li>
-                <li><a href="#">Przycisk 1</a></li>
-                <li><a href="#">Przycisk 1</a></li>
-                <li><a href="#">Przycisk 1</a></li>
-            </ul>
-        </nav>
+      <div class="photo">
+        <img src="img/guy.jpg" alt="Dominik Lorenc" />
+      </div>
 
-        <div class="photo">
-            <img src="img/guy.jpg" alt="Dominik Lorenc">
-        </div>
-
-        <div class="about-me">
-            <h1>Hej mam na imię Dominik</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, hic.</p>
-        </div>
+      <div class="about-me">
+        <h1>Hej mam na imię Dominik</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, hic.
+        </p>
+      </div>
     </header>
 
     <main>
-        <section class="event">
-            <div class="logo">
-                <img src="img/logo.png" alt="logo Coderscrew">
-            </div>
-            <div class="event-description">
-                <h1>O Coderscrew</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, quidem optio praesentium nisi enim
-                    beatae quo nam repellat harum iste?</p>
-            </div>
-        </section>
+      <section class="event">
+        <div class="logo">
+          <img src="img/logo.png" alt="logo Coderscrew" />
+        </div>
+        <div class="event-description">
+          <h1>O Coderscrew</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+            quidem optio praesentium nisi enim beatae quo nam repellat harum
+            iste?
+          </p>
+        </div>
+      </section>
+
+      <section class="skills-container">
+        <div class="center">
+          <h1>Software Skills</h1>
+          <div class="skill-box">
+            <p>Html5</p>
+            <p>90%</p>
+          </div>
+          <div class="skill">
+            <div class="skill-level html"></div>
+          </div>
+          <div class="skill-box">
+            <p>Css3</p>
+            <p>85%</p>
+          </div>
+          <div class="skill">
+            <div class="skill-level css "></div>
+          </div>
+          <div class="skill-box">
+            <p>JavaScript</p>
+            <p>20%</p>
+          </div>
+          <div class="skill">
+            <div class="skill-level js "></div>
+          </div>
+          <h1>Technologie które chce pozanć</h1>
+          <div class="skill-box">
+            <p>React</p>
+            <p>0%</p>
+          </div>
+          <div class="skill">
+            <div class="skill-level  "></div>
+          </div>
+          <div class="skill-box">
+            <p>Bootstrap</p>
+            <p>0%</p>
+          </div>
+          <div class="skill">
+            <div class="skill-level  "></div>
+          </div>
+        </div>
+      </section>
+      <section class="project">
+        <h1>Projekty</h1>
+        <div class="project-img">
+          <img src="" alt="" />
+        </div>
+      </section>
     </main>
 
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
