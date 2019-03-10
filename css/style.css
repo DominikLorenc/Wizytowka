@@ -5,7 +5,9 @@
 }
 
 :root {
-  --fontColor: orange;
+  --fontColor: #e82c0c;
+  --bgColor: #e82c0c;
+  --bgColor2: #333;
 }
 
 html {
@@ -128,9 +130,19 @@ i.off {
   color: var(--fontColor);
 }
 
+.arrow {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: var(--fontColor);
+  animation: arrowAnimation 1.5s infinite;
+}
+
 /* Section event */
 .event {
-  background-color: #e82c0c;
+  background-color: var(--bgColor);
   height: 100vh;
   width: 100%;
 }
@@ -206,53 +218,22 @@ i.off {
   height: 10px;
 }
 
-.skill-level.html {
+.skill-level.html.on {
   animation: htmlBar 1s linear both;
 }
 
-.skill-level.css {
+.skill-level.css.on {
   animation: cssBar 1s linear both;
 }
 
-.skill-level.js {
+.skill-level.js.on {
   animation: jsBar 1s linear both;
-}
-
-@keyframes htmlBar {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 90%;
-  }
-}
-
-@keyframes cssBar {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 85%;
-  }
-}
-
-@keyframes jsBar {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 20%;
-  }
 }
 
 /* project */
 .projects {
-  background-color: #e82c0c;
+  background-color: var(--bgColor);
   min-height: 100vh;
-  width: 100%;
 }
 
 .projects h1 {
@@ -316,4 +297,126 @@ i.off {
 .overlay:hover .link {
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* contact */
+
+.contact {
+  background-color: var(--bgColor2);
+  padding: 30px 20px;
+}
+
+.contact h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: white;
+  text-align: center;
+}
+
+.contact .wrap {
+  padding-top: 20px;
+}
+
+.contact input,
+.contact button,
+.contact textarea {
+  width: 100%;
+  margin-bottom: 25px;
+  font-family: saira, sans-serif;
+  font-size: 12px;
+  padding: 5px;
+}
+
+.contact input {
+  height: 36px;
+}
+
+.contact textarea {
+  height: 120px;
+}
+
+.contact button {
+  font-size: 14px;
+  line-height: 40px;
+  background-color: #333;
+  color: white;
+  border: 2px solid white;
+}
+
+.social-link {
+  font-size: 22px;
+  color: white;
+}
+
+.social-link i span {
+  margin-left: 20px;
+}
+
+/* footer */
+
+footer {
+  background-color: var(--bgColor);
+  text-align: center;
+}
+
+footer p {
+  padding: 20px 0;
+}
+
+.link-wrap {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.social a {
+  color: white;
+  padding: 0 10px;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+@keyframes arrowAnimation {
+  0% {
+    transform: translateY(50%);
+  }
+
+  50% {
+    transform: translateY(20%);
+  }
+
+  100% {
+    transform: translateY(50%);
+  }
+}
+
+@keyframes htmlBar {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes cssBar {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 85%;
+  }
+}
+
+@keyframes jsBar {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 20%;
+  }
 }
