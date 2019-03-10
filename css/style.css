@@ -29,6 +29,34 @@ header {
   background-position: left center;
 }
 
+.menu-flex {
+  display: none;
+}
+
+.menu-container {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  background-color: #666;
+  justify-content: flex-end;
+  list-style: none;
+  z-index: 100;
+}
+
+.menu-container li a {
+  display: block;
+  text-decoration: none;
+  color: var(--fontColor);
+  padding: 20px 30px;
+  text-transform: uppercase;
+  transition: 0.5s linear;
+}
+
+.menu-container li a:hover {
+  background-color: #444;
+}
 .burger {
   position: fixed;
   top: 2%;
@@ -36,6 +64,7 @@ header {
   font-size: 40px;
   z-index: 3;
   color: white;
+  cursor: pointer;
 }
 
 i.off {
@@ -51,7 +80,6 @@ i.off {
   left: 0;
   right: 0;
   top: 0;
-  height: 45vh;
   background-color: #000;
   transition: 0.5s;
   z-index: 2;
@@ -60,10 +88,8 @@ i.off {
 .container-items {
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: space-around;
   align-items: center;
-  flex-basis: 40%;
   list-style: none;
 }
 
@@ -85,7 +111,7 @@ i.off {
 }
 
 .menu.off {
-  top: -45vh;
+  top: -100vh;
 }
 
 .photo {
@@ -143,6 +169,117 @@ i.off {
   animation: arrowAnimation 1.5s infinite;
 }
 
+@media (orientation: portrait) and (min-width: 360px) {
+  .photo img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 410px) {
+  .container-items li a {
+    font-size: 35px;
+  }
+
+  .photo img {
+    border: 4px solid black;
+    box-shadow: 3px 3px 5px 3px var(--fontColor);
+  }
+
+  .about-me {
+    top: 65%;
+  }
+
+  .about-me h1 {
+    font-size: 38px;
+  }
+
+  .about-me p {
+    font-size: 30px;
+  }
+  .arrow {
+    font-size: 50px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+  .container-items li a {
+    font-size: 40px;
+  }
+
+  .photo {
+    top: 30%;
+  }
+
+  .about-me {
+    top: 65%;
+  }
+
+  .photo img {
+    width: 300px;
+    height: 300px;
+    box-shadow: 5px 5px 8px 5px var(--fontColor);
+  }
+
+  .about-me h1 {
+    font-size: 50px;
+  }
+
+  .about-me p {
+    font-size: 40px;
+  }
+  .arrow {
+    font-size: 70px;
+  }
+}
+@media (orientation: landscape) {
+  .photo {
+    top: 50%;
+    left: 20%;
+  }
+
+  .about-me {
+    position: absolute;
+    width: 50%;
+    top: 55%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (orientation: landscape) and (min-width: 600px) {
+  .photo img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+  .menu-flex {
+    display: block;
+  }
+
+  .burger {
+    display: none;
+  }
+  .photo img {
+    width: 350px;
+    height: 350px;
+    box-shadow: 5px 5px 8px 5px var(--fontColor);
+  }
+
+  .about-me h1 {
+    font-size: 50px;
+  }
+
+  .about-me p {
+    font-size: 40px;
+  }
+  .arrow {
+    font-size: 70px;
+  }
+}
+
 /* Section event */
 .event {
   background-color: var(--bgColor);
@@ -167,6 +304,52 @@ i.off {
   line-height: 150%;
 }
 
+@media (orientation: portrait) and (min-width: 360px) {
+  .event-description h1 {
+    font-size: 43px;
+  }
+
+  .event-description p {
+    font-size: 20px;
+    padding: 10px 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .event-description h1 {
+    font-size: 30px;
+  }
+
+  .event-description p {
+    font-size: 34px;
+    padding: 10px 30px;
+  }
+
+  .arrow {
+    top: 80%;
+  }
+}
+
+@media (orientation: landscape) {
+  .event {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 100%;
+  }
+
+  .event-description h1 {
+    margin-bottom: 50px;
+  }
+
+  .event-description p {
+    margin-bottom: 10px;
+  }
+}
+
 /* skills-container */
 
 .skills-container {
@@ -179,6 +362,8 @@ i.off {
 }
 
 .center {
+  max-width: 1000px;
+  margin: 0 auto;
   width: 85%;
   padding: 20px;
   background-color: #333;
@@ -236,7 +421,6 @@ i.off {
 /* project */
 .projects {
   background-color: var(--bgColor);
-  min-height: 100vh;
 }
 
 .projects h1 {
@@ -256,7 +440,6 @@ i.off {
 .project {
   width: 80%;
   height: 50%;
-  border: 2px solid black;
 }
 
 .overlay img {
@@ -264,6 +447,7 @@ i.off {
   display: block;
   width: 100%;
   height: 100%;
+  border: 4px solid black;
   z-index: -1;
 }
 
@@ -293,13 +477,39 @@ i.off {
   font-size: 72px;
 }
 
-.projects h3 {
+.project h3 {
+  text-align: center;
   font-size: 24px;
   padding: 20px;
 }
 .overlay:hover .link {
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+  .projects h1 {
+    font-size: 34px;
+  }
+
+  .projects h3 {
+    font-size: 28px;
+  }
+
+  .link i {
+    font-size: 115px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+  .project-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .project {
+    flex-basis: 30%;
+  }
 }
 
 /* contact */
@@ -319,6 +529,8 @@ i.off {
 
 .contact .wrap {
   padding-top: 20px;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .contact input,
@@ -329,6 +541,14 @@ i.off {
   font-family: saira, sans-serif;
   font-size: 12px;
   padding: 5px;
+  cursor: pointer;
+}
+
+.contact input:focus,
+.contact button:focus,
+.contact textarea:focus {
+  background-color: #888;
+  color: white;
 }
 
 .contact input {
@@ -345,6 +565,10 @@ i.off {
   background-color: #333;
   color: white;
   border: 2px solid white;
+}
+
+.contact button:hover {
+  background-color: #444;
 }
 
 .social-link {

@@ -4,7 +4,7 @@ $(document).on("scroll", function() {
   //   console.log(scrollValue);
   const section = $(".skills-container");
   const sectionFromTop = section.offset().top;
-  console.log(sectionFromTop);
+  // console.log(sectionFromTop);
   const sectionHight = section.outerHeight();
   const skillLevel = $(".skill-level");
 

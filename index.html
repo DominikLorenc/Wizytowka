@@ -19,20 +19,30 @@
   </head>
 
   <body>
-    <header>
+    <header id="portfolio">
       <div class="burger">
         <i class="fas fa-bars"></i>
         <i class="fas fa-angle-up off"></i>
       </div>
       <nav class="menu off">
         <ul class="container-items">
-          <li><a href="#">Przycisk 1</a></li>
-          <li><a href="#">Przycisk 1</a></li>
-          <li><a href="#">Przycisk 1</a></li>
-          <li><a href="#">Przycisk 1</a></li>
+          <li><a href="#portfolio">O mnie</a></li>
+          <li><a href="#course">Coderscrew</a></li>
+          <li><a href="#skills">Umiejetnosci</a></li>
+          <li><a href="#design">Projekty</a></li>
+          <li><a href="#contacts">Kontakt</a></li>
         </ul>
       </nav>
 
+      <nav class="menu-flex">
+        <ul class="menu-container">
+          <li><a href="#portfolio">O mnie</a></li>
+          <li><a href="#course">Coderscrew</a></li>
+          <li><a href="#skills">Umiejętnosci</a></li>
+          <li><a href="#design">Projekty</a></li>
+          <li><a href="#contacts">Kontakt</a></li>
+        </ul>
+      </nav>
       <div class="photo">
         <img src="img/guy.jpg" alt="Dominik Lorenc" />
       </div>
@@ -48,7 +58,7 @@
     </header>
 
     <main>
-      <section class="event">
+      <section id="course" class="event">
         <div class="logo">
           <img src="img/logo.png" alt="logo Coderscrew" />
         </div>
@@ -62,9 +72,9 @@
         </div>
       </section>
 
-      <section class="skills-container">
+      <section id="skills" class="skills-container">
         <div class="center">
-          <h1>Software Skills</h1>
+          <h1>Umiejętności</h1>
           <div class="skill-box">
             <p>Html5</p>
             <p>90%</p>
@@ -88,7 +98,8 @@
           </div>
         </div>
       </section>
-      <section class="projects">
+
+      <section id="design" class="projects">
         <h1>Projekty z kórych jestem dumny</h1>
         <div class="project-container">
           <div class="project">
@@ -96,27 +107,28 @@
               <img src="img/project.jpg" alt="projekt" />
               <a href="#" class="link"><i class="fab fa-github"></i></a>
             </div>
+            <h3>Nazwa projektu</h3>
           </div>
-          <h3>Nazwa projektu</h3>
 
           <div class="project">
             <div class="overlay">
               <img src="img/project.jpg" alt="projekt" />
               <a href="#" class="link"><i class="fab fa-github"></i></a>
             </div>
+            <h3>Nazwa projektu</h3>
           </div>
-          <h3>Nazwa projektu</h3>
+
           <div class="project">
             <div class="overlay">
               <img src="img/project.jpg" alt="projekt" />
               <a href="#" class="link"><i class="fab fa-github"></i></a>
             </div>
+            <h3>Nazwa projektu</h3>
           </div>
-          <h3>Nazwa projektu</h3>
         </div>
       </section>
 
-      <section class="contact">
+      <section id="contacts" class="contact">
         <h1>Skontaktuj się ze mną</h1>
         <div class="wrap">
           <form>
